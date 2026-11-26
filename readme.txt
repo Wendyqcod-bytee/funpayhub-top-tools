@@ -1,0 +1,4 @@
+Поддержать проект
+Ton- UQDluxgrqEIGvr3-ElIEcu7kvF5qC7XgFNv2NW6wNmG-oDcW
+Bitcoin - bc1phaaz53uendxekqt6lsk22qp74e4sw0sa0jv5tnpwp6nv4ufkfj3q9ysuwj
+Tron - TRc3zLSHUgMtxRFwEFErAJmoCgUZmo7n2Z
