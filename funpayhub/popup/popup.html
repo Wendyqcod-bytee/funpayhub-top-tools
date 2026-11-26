@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>FunpayHub</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo">▲</div>
+    <div class="who"><b>FunpayHub</b><span id="acc">…</span></div>
+  </header>
+
+  <nav>
+    <button class="tab on" data-tab="main">Главная</button>
+    <button class="tab" data-tab="tpl">Шаблоны</button>
+  </nav>
+
+  <main id="tab-main">
+    <section class="card">
+      <label class="row">
+        <span><h2>Автоподнятие лотов</h2><p id="next" class="muted"></p></span>
+        <span class="sw"><input type="checkbox" id="autoRaise"><i></i></span>
+      </label>
+      <div class="row gap">
+        <button id="raiseNow" class="btn primary">Поднять сейчас</button>
+        <label class="inline">каждые
+          <select id="interval">
+            <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+            <option value="8">8</option><option value="12">12</option>
+          </select> ч
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row"><h2>Категории для поднятия</h2><button id="refreshCats" class="btn ghost">Обновить</button></div>
+      <div id="cats" class="cats"></div>
+    </section>
+
+    <section class="card">
+      <h2>Уведомления и страницы</h2>
+      <label class="row line"><span>Новые сообщения</span><span class="sw"><input type="checkbox" id="notifyMessages"><i></i></span></label>
+      <label class="row line"><span>Новые заказы</span><span class="sw"><input type="checkbox" id="notifyOrders"><i></i></span></label>
+      <label class="row line"><span>Статистика на странице заказов</span><span class="sw"><input type="checkbox" id="ordersStats"><i></i></span></label>
+    </section>
+
+    <section class="card">
+      <h2>Журнал</h2>
+      <div id="log" class="log"></div>
+    </section>
+  </main>
+
+  <main id="tab-tpl" hidden>
+    <section class="card">
+      <p class="muted">Кнопки появятся над полем ввода в чате. <code>{buyer}</code> — ник покупателя.</p>
+      <div id="tplList"></div>
+      <button id="addTpl" class="btn ghost wide">+ Добавить шаблон</button>
+    </section>
+    <section class="card">
+      <label class="row line"><span>Отправлять сразу по нажатию<br><small class="muted">иначе текст только вставляется в поле</small></span><span class="sw"><input type="checkbox" id="sendInstantly"><i></i></span></label>
+    </section>
+  </main>
+
+  <script src="../shared.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
